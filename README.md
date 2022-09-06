@@ -1,2 +1,2 @@
 # lodestar-frontend
-Houses the code for the Money Market frontend.
+Houses the code for the Lodestar Finance Money Market frontend.
