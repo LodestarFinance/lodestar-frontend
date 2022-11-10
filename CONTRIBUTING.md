@@ -59,7 +59,7 @@ For content changes, make sure that you:
 - [ ] Compare your pull request's source changes to the version deployed to IPFS to confirm that the output matches the source and that everything is rendering as expected. This helps spot issues like typos, or content that isn't rendering correctly.
 - [ ] If there are any failing checks in your PR, troubleshoot them until they're all passing.
 
-### Source Code vs app.compound.finance
+## Source Code vs app.compound.finance
 
 When changes from pull requests are merged, a build is first created in the repo and then an action snapshots the `/build` directory contents and deploys the directory to IPFS.
 
