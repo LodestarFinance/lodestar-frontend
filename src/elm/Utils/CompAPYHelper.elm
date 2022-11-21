@@ -13,7 +13,4 @@ pow365 num =
 compRate : Decimal -> Decimal -> Decimal -> Maybe Decimal
 compRate compUSDPrice compSpeedPerDay marketTotalUSDValue =
     Decimal.fastdiv (Decimal.mul compUSDPrice compSpeedPerDay) marketTotalUSDValue
-        |> Maybe.map
-            (\compOverMarket ->
-                Decimal.sub (pow365 (Decimal.add Decimal.one compOverMarket)) Decimal.one
-            )
+        

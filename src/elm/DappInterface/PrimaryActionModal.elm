@@ -516,15 +516,13 @@ actionToggle userLanguage { primaryActionType } =
 assetAndCompRateForm : Translations.Lang -> Config -> Maybe Decimal -> PrimaryActionModalState -> Model -> Html Msg
 assetAndCompRateForm userLanguage config maybeEtherUsdPrice ({ chosenAsset, primaryActionType } as primaryActionModalState) mainModel =
     let
-        ( formLabel, rateLabel ) =
+        ( rateLabel ) =
             if primaryActionType == MintAction || primaryActionType == RedeemAction then
-                ( Translations.supply_rates userLanguage
-                , Translations.supply_apy userLanguage
+                ( Translations.supply_apy userLanguage
                 )
 
             else
-                ( Translations.borrow_rates userLanguage
-                , Translations.borrow_apy userLanguage
+                ( Translations.borrow_apy userLanguage
                 )
 
         interestRate =
@@ -588,11 +586,8 @@ assetAndCompRateForm userLanguage config maybeEtherUsdPrice ({ chosenAsset, prim
                     "– %"
     in
     div [ class "form" ]
-        [ a ([ class "label-link", target "__blank" ] ++ href External (marketDetailPageUrl chosenAsset))
-            [ label [ class "dark" ] [ text formLabel ]
-            , div [ class "line-icon line-icon--small line-icon--external-link line-icon--external-link--black" ] []
-            ]
-        , div [ class "calculation" ]
+        [
+         div [ class "calculation" ]
             [ span []
                 [ span [ class ("icon icon--" ++ chosenAsset.underlying.symbol) ] []
                 , span [ class "description" ]
@@ -1166,7 +1161,7 @@ faucetAllocateButton : Config -> Model -> CToken -> Html Msg
 faucetAllocateButton config { account, network, userLanguage } chosenAsset =
     case ( network, account, config.maybeFauceteer ) of
         ( Just actualNetwork, Acct customerAddress _, Just fauceteerAddress ) ->
-            if config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.MainNet then
+            if config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.MainNet && actualNetwork /= Network.Arbitrum then
                 a [ class "faucet-link", onClick <| WrappedTokenMsg <| Eth.Token.Web3TransactionMsg (Eth.Token.FauceteerDrip actualNetwork fauceteerAddress chosenAsset.contractAddress chosenAsset.underlying.assetAddress customerAddress) ]
                     [ text (Translations.faucet userLanguage) ]
 
@@ -1175,7 +1170,7 @@ faucetAllocateButton config { account, network, userLanguage } chosenAsset =
 
         ( Just actualNetwork, Acct customerAddress _, Nothing ) ->
             if
-                (config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.MainNet)
+                (config.cEtherToken.address /= chosenAsset.contractAddress && actualNetwork /= Network.MainNet && actualNetwork /= Network.Arbitrum)
                     && not (actualNetwork == Network.Kovan && (chosenAsset.symbol == "cSAI" || chosenAsset.symbol == "cDAI"))
                     && not (actualNetwork == Network.Ropsten && (chosenAsset.symbol == "cTBTC" || chosenAsset.symbol == "cUSDT"))
             then

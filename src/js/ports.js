@@ -44,12 +44,14 @@ const PROVIDER_TYPE_SHOW_ACCOUNT = 3;
 const ACCOUNT_CHECK_INTERVAL_MS = 2000;
 const NETWORK_CHECK_INTERVAL_MS = 4000;
 const NEW_BLOCK_CHECK_INTERVAL_MS = 5000;
-const BLOCKS_PER_DAY = new BN(86400);
-const BLOCK_CONVERSION_FACTOR = new BN(1200); // 12 seconds per block
+const BLOCKS_PER_DAY = new BN(5760); //12 seconds per block, L1 times
+const BLOCKS_PER_YEAR_LODE = new BN(2102400);
+const BLOCK_CONVERSION_FACTOR = new BN(1000); // 12 seconds per block
 const EXP_DECIMALS = 18;
 const CALCULATE_ACCOUNT_VALUES_DECIMALS = 36;
 const EXP_SCALE_BN = new BN(10).pow(new BN(18)); // 1e18 used for BN.div
 const defaultCallParams = { gas: 1.0e10 };
+var _networkId = {};
 
 const transactionStorage = trxStorage('transactions');
 const bnTransactionStorage = bnTxStorage('blocknative_transactions');
@@ -59,6 +61,8 @@ const preferencesStorage = storage('preferences');
 // we've heard about from Web3. This is to give Infura time to clear caches
 // and reduce the likelihood of getting stale data.
 const NEW_BLOCK_DELAY = 1500;
+
+console.log('inside ports base file');
 
 var currentSendGasPrice;
 
@@ -241,6 +245,7 @@ function subscribeToCTokenPorts(app, eth) {
               borrowedAssetAddress: cTokenAddress,
               borrowedAmount: toScaledDecimal(closeAmountWei, borrowedAssetDecimals),
               desiredCollateralAddress: desiredAssetAddress,
+              networkId: _networkId
             });
           })
           .catch(reportError(app));
@@ -265,6 +270,7 @@ function subscribeToCTokenPorts(app, eth) {
               borrowedAssetAddress: cTokenAddress,
               borrowedAmount: toScaledDecimal(closeAmountWei, borrowedAssetDecimals),
               desiredCollateralAddress: desiredAssetAddress,
+              networkId: _networkId
             });
           })
           .catch(reportError(app));
@@ -329,12 +335,13 @@ function subscribeToCTokenPorts(app, eth) {
               totalSupplyUnderlying: toScaledDecimal(totalSupplyScaled * oneCTokenInUnderlying, 0),
               totalUnderlyingCash: totalCash,
               compSupplySpeedPerBlock: toScaledDecimal(parseWeiStr(compSupplySpeedResult), EXP_DECIMALS),
-              compSupplySpeedPerDay: toScaledDecimal(parseWeiStr(compSupplySpeedResult).mul(BLOCKS_PER_DAY).mul(BLOCK_CONVERSION_FACTOR), EXP_DECIMALS),
+              compSupplySpeedPerDay: toScaledDecimal(parseWeiStr(compSupplySpeedResult).mul(BLOCKS_PER_YEAR_LODE).mul(BLOCK_CONVERSION_FACTOR), EXP_DECIMALS),
               compBorrowSpeedPerBlock: toScaledDecimal(parseWeiStr(compBorrowSpeedResult), EXP_DECIMALS),
-              compBorrowSpeedPerDay: toScaledDecimal(parseWeiStr(compBorrowSpeedResult).mul(BLOCKS_PER_DAY).mul(BLOCK_CONVERSION_FACTOR), EXP_DECIMALS),
+              compBorrowSpeedPerDay: toScaledDecimal(parseWeiStr(compBorrowSpeedResult).mul(BLOCKS_PER_YEAR_LODE).mul(BLOCK_CONVERSION_FACTOR), EXP_DECIMALS),
               borrowCap: toScaledDecimal(parseWeiStr(borrowCapResult), underlyingDecimals),
               mintGuardianPaused: mintGuardianResults[index],
-              blockNumber: blockNumber
+              blockNumber: blockNumber,
+              networkId: _networkId
             };
           }
         );
@@ -397,7 +404,8 @@ function subscribeToCTokenPorts(app, eth) {
                 underlyingSupplyBalance: supplyBalance,
                 underlyingTokenWalletBalance: tokenBalance,
                 underlyingTokenAllowance: tokenAllowance,
-                blockNumber: blockNumber
+                blockNumber: blockNumber,
+                networkId: _networkId
               };
             }
           );
@@ -438,7 +446,8 @@ function subscribeToComptrollerPorts(app, eth) {
             trxCount: trxCount,
             closeFactor: toScaledDecimal(parseWeiStr(closeFactorMantissa), EXP_DECIMALS),
             liquidationIncentive: toScaledDecimal(parseWeiStr(liquidationIncentiveMantissa), EXP_DECIMALS),
-            blockNumber : blockNumber
+            blockNumber : blockNumber,
+            networkId: _networkId
           }
           app.ports.giveAccountLimitsPort.send(data);
           console.log('DONE - [askAccountLimitsPort] This is where we would be posting: ', data);
@@ -461,7 +470,8 @@ function subscribeToComptrollerPorts(app, eth) {
           return {
             underlyingAssetAddress: underlyingAssetAddress,
             value: toScaledDecimal(underlyingPrice, EXP_DECIMALS),
-            blockNumber : blockNumber
+            blockNumber : blockNumber,
+            networkId: _networkId
           };
         });
         console.log('DONE - [askOraclePricesAllPort] This is where we would be posting: ', allPricesList);
@@ -1709,6 +1719,7 @@ function subscribeToFlywheelPorts(app, eth) {
 function subscribeToSetBlockNativeNetwork(app, eth) {
   // port askSetBlockNativeNetworkPort : { networkId : Int } -> Cmd msg
   app.ports.askSetBlockNativeNetworkPort.subscribe(({ networkId }) => {
+    _networkId = networkId;
     buildBlockNative(networkId);
   });
 }

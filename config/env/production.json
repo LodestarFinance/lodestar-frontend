@@ -19,7 +19,7 @@
     "mainnet": "https://mainnet.infura.io/v3",
     "arbitrumtest": "https://rinkeby.arbitrum.io/rpc",
     "arbitrumgoerli": "https://goerli-rollup.arbitrum.io/rpc",
-    "arbitrum": "https://arbitrum-mainnet.infura.io/v3"
+    "arbitrum": "https://arb-mainnet.g.alchemy.com/v2/mx8wIWIx5aIEy2xCvx_qui0Qaq1GNLtd"
   },
   "NETWORK_MAP": {
     "mainnet": 1,
@@ -32,6 +32,6 @@
     "arbitrumgoerli": 421613,
     "arbitrum": 42161
   },
-  "DEFAULT_NETWORK": "rinkeby",
+  "DEFAULT_NETWORK": "arbitrum",
   "BLOCKNATIVE_API_KEY": null
 }

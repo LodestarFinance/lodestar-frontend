@@ -1,11 +1,11 @@
 {
   "API_BASE_URL_MAP": {
     "development": "http://localhost:4000/",
-    "goerli": "https://api.lodestarfinance.io/",
-    "kovan": "https://api.lodestarfinance.io/",
+    "goerli": "https://api.compound.finance/",
+    "kovan": "https://api.compound.finance/",
     "rinkeby": "https://api.lodestarfinance.io/",
     "ropsten": "https://api.lodestarfinance.io/",
-    "mainnet": "https://api.lodestarfinance.io/",
+    "mainnet": "https://api.compound.finance/",
     "arbitrumtest": "https://api.lodestarfinance.io/",
     "arbitrumgoerli": "https://api.lodestarfinance.io/",
     "arbitrum": "https://api.lodestarfinance.io/"
@@ -19,7 +19,7 @@
     "mainnet": "https://mainnet.infura.io/v3",
     "arbitrumtest": "https://rinkeby.arbitrum.io/rpc",
     "arbitrumgoerli": "https://arb-goerli.g.alchemy.com/v2/4lqWiChjQ010in98uDJExJcWEmvkzbF_",
-    "arbitrum": "https://arbitrum-mainnet.infura.io/v3"
+    "arbitrum": "https://arb-mainnet.g.alchemy.com/v2/mx8wIWIx5aIEy2xCvx_qui0Qaq1GNLtd"
   },
   "NETWORK_MAP": {
     "mainnet": 1,
@@ -31,7 +31,8 @@
     "arbitrumtest": 421611,
     "arbitrumgoerli": 421613,
     "arbitrum": 42161
+
   },
-  "DEFAULT_NETWORK": "rinkeby",
+  "DEFAULT_NETWORK": "arbitrum",
   "BLOCKNATIVE_API_KEY": null
 }
