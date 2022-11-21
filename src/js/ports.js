@@ -1669,9 +1669,6 @@ function subscribeToFlywheelPorts(app, eth) {
       let implementationCode = await (await withWeb3Eth(eth)).getCode(implementation);
       let isG3 = implementationCode.includes('e9af0292');  // signature for claimComp(address)
       
-      if (isG3) {
-        console.log("True");
-      }
 
       if (isG3) {
         let [{ balance, votes, delegate, allocated }] = await wrapCallErr(
@@ -1689,8 +1686,6 @@ function subscribeToFlywheelPorts(app, eth) {
           blockNumber
         );
 
-        console.log("allocated:")
-        console.log(allocated);
 
         app.ports.giveCompAccruedPort.send({
           customerAddress: customerAddress,

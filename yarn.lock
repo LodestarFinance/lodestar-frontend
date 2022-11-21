@@ -3344,9 +3344,9 @@ component-emitter@^1.2.1:
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
   integrity sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==
 
-"compound-components@https://github.com/LodestarFinance/lodestar-components.git#556db2d7c97670927afc668994a091df3220ad06":
+"compound-components@https://github.com/LodestarFinance/lodestar-components.git#c066684bb39133d77b39e9a4e92736194ed9e663":
   version "1.0.0"
-  resolved "https://github.com/LodestarFinance/lodestar-components.git#556db2d7c97670927afc668994a091df3220ad06"
+  resolved "https://github.com/LodestarFinance/lodestar-components.git#c066684bb39133d77b39e9a4e92736194ed9e663"
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/preset-env" "^7.0.0"
@@ -3385,9 +3385,9 @@ component-emitter@^1.2.1:
     webpack-dev-server "^3.7.2"
     yargs "^16.2.0"
 
-"compound-config@https://github.com/LodestarFinance/lodestar-config.git#09f1c34ff567b18c81a4c4cd4d9ecb3515a3818b":
+"compound-config@https://github.com/LodestarFinance/lodestar-config.git#d785d95644555c083595673e2563567a0a8fc645":
   version "0.0.0"
-  resolved "https://github.com/LodestarFinance/lodestar-config.git#09f1c34ff567b18c81a4c4cd4d9ecb3515a3818b"
+  resolved "https://github.com/LodestarFinance/lodestar-config.git#d785d95644555c083595673e2563567a0a8fc645"
 
 compressible@~2.0.16:
   version "2.0.18"
