@@ -52,7 +52,7 @@
   "net_rate": "Net Rate",
   "net_rate_description": "This rate blends the Supply or Borrow APY with the COMP Distribution APY based on the current price of COMP.",
   "distribution_apy": "Distribution APY",
-  "enable_before_supply_or_repay": "To Supply or Repay {{tokenName}} to the Compound Protocol, you need to enable it first.",
+  "enable_before_supply_or_repay": "To Supply or Repay {{tokenName}} to the Lodestar Protocol, you need to enable it first.",
   "supply": "Supply",
   "supply_tokens": "Supply Tokens",
   "withdraw": "Withdraw",
