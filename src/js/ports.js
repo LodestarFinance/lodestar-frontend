@@ -62,7 +62,37 @@ const preferencesStorage = storage('preferences');
 // and reduce the likelihood of getting stale data.
 const NEW_BLOCK_DELAY = 1500;
 
+var accountsToBatchPost = [];
+var cTokenMetadataToBatchPost = [];
+var cTokenBalancesToBatchPost = [];
+var oraclePricesToBatchPost = [];
+var blockCounter = 0;
+
 var currentSendGasPrice;
+
+function batchPost(dataToPost, endpoint) {
+  dataToPost.forEach(
+    data => {
+      post(data, endpoint);
+    }
+  )
+}
+
+function batchPostAll() {
+  batchPost(accountsToBatchPost, 'accounts');
+  batchPost(cTokenMetadataToBatchPost, 'cTokenMetadata');
+  batchPost(cTokenBalancesToBatchPost, 'cTokenBalances');
+  batchPost(oraclePricesToBatchPost, 'oraclePrices');
+
+  // Wipe our values and our blockCounter
+  accountsToBatchPost = [];
+  cTokenMetadataToBatchPost = [];
+  cTokenBalancesToBatchPost = [];
+  oraclePricesToBatchPost = [];
+  blockCounter = 0;
+}
+
+// setTimeout(batchPost(accountsToBatchPost), 10000);
 
 function reportError(app) {
   return (error) => {
@@ -126,7 +156,7 @@ async function get(endpoint) {
   // console.log('| FETCHING FROM API |')
   // console.log('---------------------')
   // console.log(`Trying to fetch from url: https://api.lodestarfinance.io/${endpoint}`)
-  let response = await fetch(`https://https://api.lodestarfinance.io/${endpoint}`, {
+  let response = await fetch(`https://api.lodestarfinance.io/${endpoint}`, {
       method: 'GET'
   })
 
@@ -144,24 +174,28 @@ async function post(data, endpoint) {
   // console.log('------------------')
   // console.log('| POSTING TO API |')
   // console.log('------------------')
-  // console.log(`Trying to post to url: https://api.lodestarfinance.io/${endpoint}`)
+  // console.log(`Trying to post to url: http://localhost:5000/${endpoint}`)
   // console.log(`Trying to post data: ${JSON.stringify({data})}`)
-  let response = await fetch(`https://api.lodestarfinance.io/${endpoint}`, {
-      method: 'POST', // or 'PUT'
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({data}),
-      // TODO: we may need this in the future?
-      mode: 'cors', // no-cors, *cors, same-origin
-  })
+  try {
+    let response = await fetch(`https://api.lodestarfinance.io/${endpoint}`, {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({data}),
+        // TODO: we may need this in the future?
+        mode: 'cors', // no-cors, *cors, same-origin
 
-  // console.log('Response status: ', response.status); // 200
-  // console.log('Response status text: ', response.statusText); // OK
-
-  if (response.status === 200) {
+        // console.log('Response status: ', response.status); // 200
+        // console.log('Response status text: ', response.statusText); // OK
+    })
+    if (response.status === 200) {
       let data = await response.text();
+      console.log('API posted properly', response.status)
       return data;
+    }
+  } catch {
+    console.log('Failed to fetch from API')
   }
 }
 
@@ -347,7 +381,8 @@ function subscribeToCTokenPorts(app, eth) {
         //TODO: Change me to giveCTokenMetadataAllPort
         app.ports.giveCTokenMetadataPort.send(cTokenMetadataList);
         // console.log('DONE - [giveCTokenMetadataPort] This is where we would be posting: ', cTokenMetadataList);
-        post(cTokenMetadataList, 'cTokenMetadata');
+        // post(cTokenMetadataList, 'cTokenMetadata');
+        cTokenMetadataToBatchPost.push(cTokenMetadataList)
         // console.log("After Post Function");
         // console.log(cTokenMetadataList);
       })
@@ -410,7 +445,8 @@ function subscribeToCTokenPorts(app, eth) {
 
           app.ports.giveCTokenBalancesAllPort.send(cTokenBalancesList);
           // console.log('DONE - [giveCTokenBalancesAllPort] This is where we would be posting: ', cTokenBalancesList);
-          post(cTokenBalancesList, 'cTokenBalances');
+          cTokenBalancesToBatchPost.push(cTokenBalancesList)
+          // post(cTokenBalancesList, 'cTokenBalances');
         })
         .catch(reportError(app));
     }
@@ -449,7 +485,8 @@ function subscribeToComptrollerPorts(app, eth) {
           }
           app.ports.giveAccountLimitsPort.send(data);
           // console.log('DONE - [askAccountLimitsPort] This is where we would be posting: ', data);
-          post(data, 'accounts');
+          // post(data, 'accounts');
+          accountsToBatchPost.push(data)
         }
       )
       .catch(reportError(app));
@@ -473,7 +510,8 @@ function subscribeToComptrollerPorts(app, eth) {
           };
         });
         // console.log('DONE - [askOraclePricesAllPort] This is where we would be posting: ', allPricesList);
-        post(allPricesList, 'oraclePrices');
+        // post(allPricesList, 'oraclePrices');
+        oraclePricesToBatchPost.push(allPricesList)
         app.ports.giveOraclePricesAllPort.send(allPricesList);
       })
       .catch(reportError(app));
@@ -513,6 +551,13 @@ function subscribeToNewBlocks(app, eth) {
       getBlockNumber(eth)
         .then((blockNumber) => {
           if (blockNumber && blockNumber !== previousBlock) {
+            // If we hit a new block, increment our block counter
+            blockCounter += 1;
+            // If we've seen 50 new block instance postings from Palisade (which happen ever 5 seconds)
+            if (blockCounter == 10) {
+              // Post the data in a batch
+              batchPostAll()
+            };
             debug(`New Block: ${blockNumber}`);
             app.ports.giveNewBlockPort.send({ block: blockNumber });
             previousBlock = blockNumber;
