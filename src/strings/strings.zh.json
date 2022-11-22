@@ -52,7 +52,7 @@
     "net_rate": "净费率",
     "net_rate_description": "该费率根据COMP的当前价格将供应/借出APY与COMP分配APY混合在一起。",
     "distribution_apy": "分销APY",
-    "enable_before_supply_or_repay": "要向复合协议提供或偿还{{tokenName}}，您需要先启用它。",
+    "enable_before_supply_or_repay": "要向 Lodestar 提供或償還 {{tokenName}}，您需要先啟用它",
     "supply": "供应",
     "supply_tokens": "供应令牌",
     "withdraw": "提现",

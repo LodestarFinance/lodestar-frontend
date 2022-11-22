@@ -52,7 +52,7 @@
     "net_rate": "Tasa neta",
     "net_rate_description": "Esta tasa combina el APY de suministro / préstamo con el APY de distribución COMP basado en el precio actual de COMP.",
     "distribution_apy": "Distribución APY",
-    "enable_before_supply_or_repay": "Para suministrar o reembolsar {{tokenName}} al protocolo compuesto, primero debe habilitarlo.",
+    "enable_before_supply_or_repay": "Para suministrar o reembolsar {{tokenName}} al protocolo Lodestar, primero debe habilitarlo.",
     "supply": "Suministro",
     "supply_tokens": "Fichas de suministro",
     "withdraw": "Retirar",
