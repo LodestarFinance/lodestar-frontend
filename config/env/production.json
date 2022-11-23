@@ -1,21 +1,13 @@
 {
   "API_BASE_URL_MAP": {
     "development": "http://localhost:4000/",
-    "goerli": "https://api.lodestarfinance.io/",
-    "kovan": "https://api.lodestarfinance.io/",
-    "rinkeby": "https://api.lodestarfinance.io/",
-    "ropsten": "https://api.lodestarfinance.io/",
     "mainnet": "https://api.lodestarfinance.io/",
     "arbitrumtest": "https://api.lodestarfinance.io/",
     "arbitrumgoerli": "https://api.lodestarfinance.io/",
-    "arbitrum": "https://api.lodestarfinance.io/"
+    "arbitrum": "https://placeholder.url/"
   },
   "DATA_PROVIDERS": {
     "development": "http://localhost:8545",
-    "goerli": "https://goerli.infura.io/v3",
-    "rinkeby": "https://rinkeby.infura.io/v3",
-    "kovan": "https://kovan.infura.io/v3",
-    "ropsten": "https://ropsten.infura.io/v3",
     "mainnet": "https://mainnet.infura.io/v3",
     "arbitrumtest": "https://rinkeby.arbitrum.io/rpc",
     "arbitrumgoerli": "https://goerli-rollup.arbitrum.io/rpc",

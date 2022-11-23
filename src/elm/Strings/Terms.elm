@@ -5,7 +5,7 @@ import Strings.Translations as Translations
 
 terms_updated_date : Translations.Lang -> String
 terms_updated_date _ =
-    "Updated: September 8th, 2022"
+    "Updated: November 23, 2022"
 
 
 terms_of_service : Translations.Lang -> String
@@ -245,7 +245,7 @@ terms_15_header _ =
 
 terms_15_description_part1 : Translations.Lang -> String
 terms_15_description_part1 _ =
-    "We will use our best efforts to resolve any potential disputes through informal, good faith negotiations. If a potential dispute arises, you must contact us by sending an email to legal@compound.finance so that we can attempt to resolve it without resorting to formal dispute resolution. If we aren’t able to reach an informal resolution within sixty days of your email, then you and we both agree to resolve the potential dispute according to the process set forth below."
+    "We will use our best efforts to resolve any potential disputes through informal, good faith negotiations. If a potential dispute arises, you must contact us by sending an email to dev@lodestarfinance.io so that we can attempt to resolve it without resorting to formal dispute resolution. If we aren’t able to reach an informal resolution within sixty days of your email, then you and we both agree to resolve the potential dispute according to the process set forth below."
 
 
 terms_15_description_part2 : Translations.Lang -> String
@@ -260,7 +260,7 @@ terms_15_description_part3 _ =
 
 terms_15_description_part4 : Translations.Lang -> String
 terms_15_description_part4 _ =
-    " The arbitration shall be held on a confidential basis before a single arbitrator, who shall be selected pursuant to JAMS rules. The arbitration will be held in San Francisco, California, unless you and we both agree to hold it elsewhere. Unless we agree otherwise, the arbitrator may not consolidate your claims with those of any other party. Any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction."
+    " The arbitration shall be held on a confidential basis before a single arbitrator, who shall be selected pursuant to JAMS rules. The arbitration will be held in Austin, Texas, unless you and we both agree to hold it elsewhere. Unless we agree otherwise, the arbitrator may not consolidate your claims with those of any other party. Any judgment on the award rendered by the arbitrator may be entered in any court of competent jurisdiction."
 
 
 terms_16_header : Translations.Lang -> String
