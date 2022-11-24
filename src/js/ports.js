@@ -71,18 +71,14 @@ var blockCounter = 0;
 var currentSendGasPrice;
 
 function batchPost(dataToPost, endpoint) {
-  dataToPost.forEach(
-    data => {
-      post(data, endpoint);
-    }
-  )
+  post(dataToPost, endpoint);
 }
 
 function batchPostAll() {
-  batchPost(accountsToBatchPost, 'accounts');
-  batchPost(cTokenMetadataToBatchPost, 'cTokenMetadata');
-  batchPost(cTokenBalancesToBatchPost, 'cTokenBalances');
-  batchPost(oraclePricesToBatchPost, 'oraclePrices');
+  batchPost(accountsToBatchPost[accountsToBatchPost.length-1], 'accounts');
+  batchPost(cTokenMetadataToBatchPost[cTokenMetadataToBatchPost.length-1], 'cTokenMetadata');
+  batchPost(cTokenBalancesToBatchPost[cTokenBalancesToBatchPost.length-1], 'cTokenBalances');
+  batchPost(oraclePricesToBatchPost[oraclePricesToBatchPost.length-1], 'oraclePrices');
 
   // Wipe our values and our blockCounter
   accountsToBatchPost = [];
