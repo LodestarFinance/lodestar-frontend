@@ -62,6 +62,7 @@ const preferencesStorage = storage('preferences');
 // and reduce the likelihood of getting stale data.
 const NEW_BLOCK_DELAY = 1500;
 
+var firstLoad = true;
 var accountsToBatchPost = [];
 var cTokenMetadataToBatchPost = [];
 var cTokenBalancesToBatchPost = [];
@@ -550,8 +551,9 @@ function subscribeToNewBlocks(app, eth) {
             // If we hit a new block, increment our block counter
             blockCounter += 1;
             // If we've seen 50 new block instance postings from Palisade (which happen ever 5 seconds)
-            if (blockCounter == 4) {
+            if ((blockCounter == 1 && firstLoad) || (blockCounter == 4)) {
               // Post the data in a batch
+              firstLoad = false;
               batchPostAll()
             };
             debug(`New Block: ${blockNumber}`);
