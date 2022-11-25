@@ -550,7 +550,7 @@ function subscribeToNewBlocks(app, eth) {
             // If we hit a new block, increment our block counter
             blockCounter += 1;
             // If we've seen 50 new block instance postings from Palisade (which happen ever 5 seconds)
-            if (blockCounter == 10) {
+            if (blockCounter == 4) {
               // Post the data in a batch
               batchPostAll()
             };
