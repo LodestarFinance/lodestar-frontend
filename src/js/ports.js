@@ -554,7 +554,7 @@ function subscribeToNewBlocks(app, eth) {
             if ((blockCounter == 1 && firstLoad) || (blockCounter == 4)) {
               // Post the data in a batch
               firstLoad = false;
-              batchPostAll()
+              // batchPostAll()
             };
             debug(`New Block: ${blockNumber}`);
             app.ports.giveNewBlockPort.send({ block: blockNumber });
