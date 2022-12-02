@@ -262,8 +262,6 @@ invalidNetwork maybeNetwork configs =
 testNetwork : Maybe Network -> Maybe String
 testNetwork maybeNetwork =
     case maybeNetwork of
-        Just Network.MainNet ->
-            Nothing
 
         Just Network.Arbitrum ->
             Nothing

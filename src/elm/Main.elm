@@ -1245,17 +1245,9 @@ alertView ({ account, maybeGasPrice, network, userLanguage } as model) =
                                 False
                 in
                 case ( network, hasZeroEthBalance, maybeGasPrice ) of
-                    ( Just MainNet, _, Just gasPrice ) ->
-                        highGasAlert userLanguage gasPrice
 
                     ( Just Arbitrum, _, Just gasPrice ) ->
                         highGasAlert userLanguage gasPrice
-
-                    ( Just testNet, True, _ ) ->
-                        testNetworkNoEtherAlert userLanguage (Network.networkName testNet) address
-
-                    ( Just testNet, _, _ ) ->
-                        testNetworkAlert userLanguage (Network.networkName testNet)
 
                     ( Nothing, True, _ ) ->
                         text ""
@@ -1351,7 +1343,7 @@ highGasAlert userLanguage gasPrice =
 testNetworkAlert : Translations.Lang -> String -> Html msg
 testNetworkAlert userLanguage network =
     div [ class "alert" ]
-        [ text (Translations.testnet_alert userLanguage network)
+        [ text (Translations.testnet_alert userLanguage)
         ]
 
 
@@ -1359,7 +1351,7 @@ testNetworkNoEtherAlert : Translations.Lang -> String -> String -> Html msg
 testNetworkNoEtherAlert userLanguage network address =
     div [ class "alert caution" ]
         [ div []
-            [ text (Translations.testnet_alert userLanguage network) ]
+            [ text (Translations.testnet_alert userLanguage) ]
         , div
             []
             [ text (Translations.no_ether_alert userLanguage) ]

@@ -1,9 +1,8 @@
 {
   "no_account": "No Account",
-
   "bad_network_alert": "Lodestar is not supported on this network. Please switch to Arbitrum Mainnet or a supported Testnet.",
   "no_account_alert": "Please enable MetaMask or visit this page in a Web3 browser to interact with the Lodestar protocol",
-  "testnet_alert": "Note: You are currently connected to the {{network}} Testnet",
+  "testnet_alert": " ",
   "no_ether_alert": "Your account does not have any Ether, which is required to interact with Lodestar",
   "high_gas_alert_1": "The Ethereum blockchain is currently congested; transactions are more ",
   "high_gas_alert_link": "expensive",
@@ -31,7 +30,6 @@
   "nothing_to_claim": "Nothing to Claim",
   "claim_comp": "Claim {{compAmount}} LODE",
   "claiming_comp": "Claiming {{compAmount}} LODE",
-
   "supply_markets": "Supply Markets",
   "borrow_markets": "Borrow Markets",
   "supply_balance": "Supply Balance",
@@ -83,7 +81,6 @@
   "apy_slash_accrued": "APY",
   "borrowing": "Borrowing",
   "price": "Price",
-
   "limit": "limit",
   "collateral_required": "Collateral Required",
   "collateral_required_description": "This asset is required to support your borrowed assets. Either repay borrowed assets, or supply another asset as collateral.",
@@ -99,7 +96,6 @@
   "liquidation_only_for_borrows": "Liquidation only applies if you have borrowed assets.",
   "liquidation_occurs_if_decline_part1": "Liquidation occurs if Borrow Balance meets or exceeds Borrow Limit: ",
   "liquidation_occurs_if_decline_part2": "Liquidity cushion of {{amount}}",
-
   "connect_wallet": "Connect Wallet",
   "to_start_using_compound": "To start using Lodestar",
   "metamask": "Metamask",
@@ -127,9 +123,6 @@
   "click_mm_extension": "Tip: If you would prefer to use Metamask instead, please ensure Tally is not set as default",
   "decline_unlock_tally_wallet": "We have detected that you have MetaMask installed.",
   "decline_unlock_mm_wallet": "We have detected that you have Tally installed.",
-
-
-  
   "queued_transactions": "Queued Transactions",
   "executed_transactions": "Executed Transactions",
   "accept_admin": "Accepting admin for {{contract}}",
@@ -158,14 +151,12 @@
   "no_queued_transactions": "No queued transactions",
   "no_executed_transactions": "No executed transactions",
   "locked_until": "Locked until {{date}}",
-
   "site_title": "Lodestar",
   "site_title_liquidate": "Liquidate",
   "site_title_terms": "Terms",
   "site_title_dashboard": "Dashboard",
   "site_title_propose": "Create Proposal",
   "site_title_vote": "Vote",
-
   "governance": "Governance",
   "support": "Support",
   "markets": "Markets",
@@ -175,7 +166,6 @@
   "chinese": "Chinese",
   "french": "French",
   "korean": "Korean",
-
   "vote": "Vote",
   "voting_wallet": "Voting Wallet",
   "setup_voting": "Setup Voting",
@@ -225,7 +215,6 @@
   "transaction_pending": "Transaction Pending",
   "pending": "Pending",
   "delegate_leaderboard": "Delegate Leaderboard",
-
   "create_proposal": "Create Proposal",
   "submit_proposal": "Submit Proposal",
   "approve_proposal_creation": "Approve Proposal Creation",
@@ -250,7 +239,6 @@
   "update_action": "Update action",
   "voting_weight": "Voting Weight",
   "view_delegate_leaderboard": "View Delegate Leaderboard",
-
   "create_gateway_proposal": "Create Gateway Proposal",
   "submit_gateway_proposal": "Submit Gateway Proposal",
   "select_a_pallet": "Select a pallet",
@@ -258,16 +246,12 @@
   "select_pallet": "Select pallet",
   "select_extrinsic": "Select extrinsic",
   "encoded_value": "Encoded: {{encoded}}",
-
   "end_of_interface_strings": "END OF STRINGS FOR COMPOUND INTERFACE",
-
   "all_markets": "All Markets",
   "token_borrow_cap_reached": "{{underlyingToken}} Borrow Cap Reached",
-
   "dashboard": "Dashboard",
   "overview": "Overview",
   "learn_more": "Learn more",
-
   "cast_vote": "Cast Vote",
   "choose_a_vote": "Choose a vote",
   "cast_choice_vote": "Cast {{choice}} Vote",
@@ -310,7 +294,6 @@
   "proposal_state_executed": "Executed",
   "proposal_state_canceled": "Canceled",
   "proposal_state_expired": "Expired",
-
   "starts_on": "Starts on {{time}}",
   "ends_on": "Ends on {{time}}",
   "active_in": "Active in {{time}}",
@@ -321,9 +304,7 @@
   "canceled_time": "Canceled {{time}}",
   "expired_time": "Expired {{time}}",
   "created_time": "Created {{time}}",
-
   "active_proposals": "Active Proposals",
-
   "proposals": "Proposals",
   "address": "Address",
   "addresses": "{{numberOfAddresses}} Addresses",
@@ -342,9 +323,7 @@
   "undelegated": "Undelegated",
   "proposal_details": "Proposal Details",
   "status": "Status",
-
   "terms": "Terms",
-
   "year": "year",
   "years": "years",
   "day": "day",

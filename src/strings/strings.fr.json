@@ -1,9 +1,8 @@
 {
     "no_account": "Pas de compte",
-
     "bad_network_alert": "Lodestar n'est pas pris en charge sur ce réseau. Veuillez passer au réseau principal.",
     "no_account_alert": "Veuillez activer MetaMask ou visiter cette page dans un navigateur Web3 pour interagir avec le protocole Compound",
-    "testnet_alert": "Remarque: vous êtes actuellement connecté au Testnet {{network}}",
+    "testnet_alert": " ",
     "no_ether_alert": "Votre compte n'a pas d'Ether, qui est nécessaire pour interagir avec Lodestar",
     "high_gas_alert_1": "La blockchain Ethereum est actuellement encombrée; les transactions sont plus",
     "high_gas_alert_link": "cher",
@@ -31,7 +30,6 @@
     "nothing_to_claim": "Rien à réclamer",
     "claim_comp": "Réclamer {{compAmount}} LODE",
     "claiming_comp": "Réclamation de {{compAmount}} LODE",
-
     "supply_markets": "Marchés d'approvisionnement",
     "borrow_markets": "Emprunter des marchés",
     "supply_balance": "Balance d'approvisionnement",
@@ -83,7 +81,6 @@
     "apy_slash_accrued": "APY / Accru",
     "borrowing": "Emprunt",
     "price": "Prix",
-
     "limit": "limite",
     "collateral_required": "Garantie requise",
     "collateral_required_description": "Cet actif est nécessaire pour soutenir vos actifs empruntés. Soit rembourser les actifs empruntés, soit fournir un autre actif en garantie.",
@@ -99,7 +96,6 @@
     "liquidation_only_for_borrows": "La liquidation ne s'applique que si vous avez emprunté des actifs.",
     "liquidation_occurs_if_decline_part1": "La liquidation se produit si le solde d'emprunt atteint ou dépasse la limite d'emprunt:",
     "liquidation_occurs_if_decline_part2": "Coussin de liquidité de {{amount}}",
-
     "connect_wallet": "Connecter le portefeuille",
     "to_start_using_compound": "Pour commencer à utiliser Lodestar",
     "metamask": "Metamask",
@@ -127,9 +123,6 @@
     "click_mm_extension": "Conseil : Si vous préférez utiliser Metamask à la place, assurez-vous que Tally n'est pas défini par défaut.",
     "decline_unlock_tally_wallet": "Nous avons détecté que vous avez installé MetaMask.",
     "decline_unlock_mm_wallet": "Nous avons détecté que vous avez installé Tally.",
-
-
-  
     "queued_transactions": "Transactions en file d'attente",
     "executed_transactions": "Transactions exécutées",
     "accept_admin": "Accepter l'administrateur pour {{contract}}",
@@ -158,14 +151,12 @@
     "no_queued_transactions": "Aucune transaction en file d'attente",
     "no_executed_transactions": "Aucune transaction exécutée",
     "locked_until": "Verrouillé jusqu'au {{date}}",
-
     "site_title": "Lodestar",
     "site_title_liquidate": "Liquider",
     "site_title_terms": "termes",
     "site_title_dashboard": "Tableau de bord",
     "site_title_propose": "Créer une proposition",
     "site_title_vote": "Voter",
-
     "governance": "La gouvernance",
     "support": "Soutien",
     "markets": "Marchés",
@@ -175,7 +166,6 @@
     "chinese": "Chinois",
     "french": "Français",
     "korean": "coréen",
-
     "vote": "Vote",
     "voting_wallet": "Portefeuille de vote",
     "setup_voting": "Configuration du vote",
@@ -225,7 +215,6 @@
     "transaction_pending": "Transaction en attente",
     "pending": "En attente",
     "delegate_leaderboard": "Tableau des délégués",
-
     "create_proposal": "Créer une proposition",
     "submit_proposal": "Soumettre la proposition",
     "approve_proposal_creation": "Approuver la création de la proposition",
@@ -250,7 +239,6 @@
     "update_action": "Action de mise à jour",
     "voting_weight": "Poids de vote",
     "view_delegate_leaderboard": "Afficher le classement des délégués",
-
     "create_gateway_proposal": "Créer une proposition Gateway",
     "submit_gateway_proposal": "Soumettre une proposition Gateway",
     "select_a_pallet": "Sélectionnez une palette",
@@ -258,16 +246,12 @@
     "select_pallet": "Sélectionnez la palette",
     "select_extrinsic": "Sélectionnez extrinsèque",
     "encoded_value": "Encodé: {{encoded}}",
-
     "end_of_interface_strings": "FIN DES CHAÎNES POUR L'INTERFACE Lodestar",
-
     "all_markets": "Tous les marchés",
     "token_borrow_cap_reached": "Le plafond d'emprunt {{underlyingToken}} atteint",
-
     "dashboard": "Tableau de bord",
     "overview": "Aperçu",
     "learn_more": "Apprendre encore plus",
-
     "cast_vote": "Vote de vote",
     "choose_a_vote": "Choisissez un vote",
     "cast_choice_vote": "Voter pour {{choice}}",
@@ -310,7 +294,6 @@
     "proposal_state_executed": "Réalisé",
     "proposal_state_canceled": "Annulé",
     "proposal_state_expired": "Expiré",
-
     "starts_on": "Commence le {{time}}",
     "ends_on": "Se termine le {{time}}",
     "active_in": "Actif en {{time}}",
@@ -321,9 +304,7 @@
     "canceled_time": "Annulé {{time}}",
     "expired_time": "Temps expiré}}",
     "created_time": "Créé le {{time}}",
-
     "active_proposals": "Propositions actives",
-
     "proposals": "Les propositions",
     "address": "Adresse",
     "addresses": "{{numberOfAddresses}} Adresses",
@@ -342,9 +323,7 @@
     "undelegated": "Non déléguée",
     "proposal_details": "Détails de la proposition",
     "status": "Statut",
-
     "terms": "termes",
-
     "year": "année",
     "years": "ans",
     "day": "journée",

@@ -1,9 +1,8 @@
 {
     "no_account": "계정 없음",
-
     "bad_network_alert": "이 네트워크에서는 Lodestar가 지원되지 않습니다. 메인 넷으로 전환하세요.",
     "no_account_alert": "MetaMask를 활성화하거나 Lodestar 프로토콜과 상호 작용할 수 있는 Web3 브라우저를 이용해 이 페이지를 방문해주세요",
-    "testnet_alert": "알림 : 현재 {{network}} 테스트넷에 연결되어 있습니다",
+    "testnet_alert": " ",
     "no_ether_alert": "Lodestar와 상호 작용하려면 계정에 Ether를 보유하고 있어야 합니다",
     "high_gas_alert_1": "이더 리움 블록 체인은 현재 혼잡합니다. 거래는 더",
     "high_gas_alert_link": "비싼",
@@ -31,7 +30,6 @@
     "nothing_to_claim": "청구 할 사항 없음",
     "claim_comp": "{{compAmount}} LODE 청구",
     "claiming_comp": "{{compAmount}} LODE 청구",
-
     "supply_markets": "공급",
     "borrow_markets": "대출",
     "supply_balance": "공급 잔액",
@@ -83,7 +81,6 @@
     "apy_slash_accrued": "APY / 이자",
     "borrowing": "대출",
     "price": "가격",
-
     "limit": "한도",
     "collateral_required": "담보가 필요합니다",
     "collateral_required_description": "대출한 자산을 지원하려면 이 자산이 필요합니다. 대출받은 자산을 상환하거나 다른 자산을 담보로 제공하세요.",
@@ -99,7 +96,6 @@
     "liquidation_only_for_borrows": "청산은 대출한 자산이 있을 때만 적용됩니다.",
     "liquidation_occurs_if_decline_part1": "대출 잔액이 대출 한도를 초과하거나 대출 한도와 같아질 경우 청산이 발생합니다.",
     "liquidation_occurs_if_decline_part2": "대출 한도까지 남은 잔액: {{amount}}",
-
     "connect_wallet": "지갑 연결",
     "to_start_using_compound": "Lodestar를 사용하려면 지갑 연결이 필요합니다",
     "metamask": "Metamask",
@@ -127,9 +123,6 @@
     "click_mm_extension": "팁: 메타마스크를 대신 사용하려면 Tally가 기본값으로 설정되어 있지 않은지 확인하십시오.",
     "decline_unlock_tally_wallet": "MetaMask가 설치되어 있음을 감지했습니다.",
     "decline_unlock_mm_wallet": "Tally가 설치되어 있음을 감지했습니다.",
-
-
-  
     "queued_transactions": "대기 중인 트랜잭션",
     "executed_transactions": "실행된 트랜잭션",
     "accept_admin": "{{contract}}에 대한 관리자 승인",
@@ -158,14 +151,12 @@
     "no_queued_transactions": "대기 중인 트랜잭션이 없습니다.",
     "no_executed_transactions": "실행된 트랜잭션이 없습니다.",
     "locked_until": "{{date}}까지 잠김",
-
     "site_title": "Lodestar",
     "site_title_liquidate": "청산",
     "site_title_terms": "약관",
     "site_title_dashboard": "대시보드",
     "site_title_propose": "제안서 작성",
     "site_title_vote": "투표",
-
     "governance": "거버넌스",
     "support": "도움말",
     "markets": "마켓",
@@ -175,7 +166,6 @@
     "chinese": "중국어",
     "french": "프랑스어",
     "korean": "한국어",
-
     "vote": "투표",
     "voting_wallet": "투표 지갑",
     "setup_voting": "투표 설정",
@@ -225,7 +215,6 @@
     "transaction_pending": "트랜잭션 보류 중",
     "pending": "보류 중",
     "delegate_leaderboard": "대리인 순위표",
-
     "create_proposal": "제안서 작성",
     "submit_proposal": "제안서 제출",
     "approve_proposal_creation": "제안서 생성 승인",
@@ -250,7 +239,6 @@
     "update_action": "업데이트 작업",
     "voting_weight": "투표 가중치",
     "view_delegate_leaderboard": "대리인 순위표 보기",
-
     "create_gateway_proposal": "Gateway 제안 생성",
     "submit_gateway_proposal": "Gateway 제안 제출",
     "select_a_pallet": "팔레트 선택",
@@ -258,16 +246,12 @@
     "select_pallet": "팔레트 선택",
     "select_extrinsic": "외부 선택",
     "encoded_value": "인코딩 됨 : {{encoded}}",
-
     "end_of_interface_strings": "화합물 인터페이스를위한 문자열의 끝",
-
     "all_markets": "모든 마켓",
     "token_borrow_cap_reached": "{{underlyingToken}} 대출 한도 도달",
-
     "dashboard": "대시보드",
     "overview": "개요",
     "learn_more": "자세히 알아보기",
-
     "cast_vote": "캐스트 투표",
     "choose_a_vote": "투표 선택",
     "cast_choice_vote": "{{choice}} 투표",
@@ -310,7 +294,6 @@
     "proposal_state_executed": "실행",
     "proposal_state_canceled": "취소",
     "proposal_state_expired": "만료",
-
     "starts_on": "시작 시간: {{time}}",
     "ends_on": "종료 시간: {{time}}",
     "active_in": "투표 시작: {{time}}",
@@ -321,9 +304,7 @@
     "canceled_time": "취소: {{time}}",
     "expired_time": "만료: {{time}}",
     "created_time": "생성 시간 {{time}}",
-
     "active_proposals": "활성 제안",
-
     "proposals": "제안서",
     "address": "주소",
     "addresses": "{{numberOfAddresses}} 주소",
@@ -342,9 +323,7 @@
     "undelegated": "위임하지 않음",
     "proposal_details": "제안서 세부 정보",
     "status": "상태",
-
     "terms": "약관",
-
     "year": "년",
     "years": "년",
     "day": "일",

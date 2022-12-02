@@ -1,9 +1,8 @@
 {
     "no_account": "Sin cuenta",
-
     "bad_network_alert": "Lodestar no es compatible con esta red. Cambie a Mainnet.",
     "no_account_alert": "Active MetaMask o visite esta página en un navegador Web3 para usar el Lodestar Protocol",
-    "testnet_alert": "Nota: Actualmente está conectado a la {{network}} Testnet",
+    "testnet_alert": " ",
     "no_ether_alert": "Su cuenta no tiene ningún Ether, que se requiere para interactuar con Lodestar",
     "high_gas_alert_1": "La cadena de bloques Ethereum está actualmente congestionada; las transacciones son mas",
     "high_gas_alert_link": "costoso",
@@ -31,7 +30,6 @@
     "nothing_to_claim": "Nada que reclamar",
     "claim_comp": "Reclamar {{compAmount}} LODE",
     "claiming_comp": "Reclamando {{compAmount}} LODE",
-
     "supply_markets": "Mercados de suministro",
     "borrow_markets": "Mercados de préstamos",
     "supply_balance": "Saldo de suministro",
@@ -83,7 +81,6 @@
     "apy_slash_accrued": "APY / acumulado",
     "borrowing": "Préstamo",
     "price": "Precio",
-
     "limit": "límite",
     "collateral_required": "Colateral requerido",
     "collateral_required_description": "Este activo es necesario para respaldar sus activos prestados. Pague los activos prestados o suministre otro activo como garantía.",
@@ -99,7 +96,6 @@
     "liquidation_only_for_borrows": "La liquidación solo se aplica si ha prestado activos.",
     "liquidation_occurs_if_decline_part1": "La liquidación se produce si el saldo de préstamos cumple o excede el límite de préstamos: ",
     "liquidation_occurs_if_decline_part2": "Cojín de liquidez de {{amount}}",
-
     "connect_wallet": "Conectar Wallet",
     "to_start_using_compound": "Para comenzar a usar Lodestar",
     "metamask": "Metamask",
@@ -127,9 +123,6 @@
     "click_mm_extension": "Consejo: si prefiere usar Metamask en su lugar, asegúrese de que Tally no esté configurado como predeterminado",
     "decline_unlock_tally_wallet": "Hemos detectado que tienes MetaMask instalado.",
     "decline_unlock_mm_wallet": "Hemos detectado que tienes Tally instalado.",
-
-
-  
     "queued_transactions": "Transacciones en cola",
     "executed_transactions": "Transacciones ejecutadas",
     "accept_admin": "Aceptar administrador para {{contract}}",
@@ -158,14 +151,12 @@
     "no_queued_transactions": "No hay transacciones en cola",
     "no_executed_transactions": "No hay transacciones ejecutadas",
     "locked_until": "Bloqueado hasta {{date}}",
-
     "site_title": "Lodestar",
     "site_title_liquidate": "Liquidar",
     "site_title_terms": "Condiciones",
     "site_title_dashboard": "Tablero",
     "site_title_propose": "Crear propuesta",
     "site_title_vote": "Votar",
-
     "governance": "Gobernanza",
     "support": "Apoyo",
     "markets": "Mercados",
@@ -175,7 +166,6 @@
     "chinese": "Chino",
     "french": "Francés",
     "korean": "coreano",
-
     "vote": "Votar",
     "voting_wallet": "Billetera de votación",
     "setup_voting": "Configurar votación",
@@ -225,7 +215,6 @@
     "transaction_pending": "Transacción pendiente",
     "pending": "Pendiente",
     "delegate_leaderboard": "Tabla de clasificación delegada",
-
     "create_proposal": "Crear propuesta",
     "submit_proposal": "Enviar propuesta",
     "approve_proposal_creation": "Aprobar la creación de propuestas",
@@ -250,7 +239,6 @@
     "update_action": "Actualizar acción",
     "voting_weight": "Peso de votación",
     "view_delegate_leaderboard": "Ver tabla de posiciones de delegados",
-
     "create_gateway_proposal": "Crear propuesta de Gateway",
     "submit_gateway_proposal": "Enviar propuesta de Gateway",
     "select_a_pallet": "Seleccione una paleta",
@@ -258,16 +246,12 @@
     "select_pallet": "Seleccionar palet",
     "select_extrinsic": "Seleccione extrínseco",
     "encoded_value": "Codificado: {{encoded}}",
-
     "end_of_interface_strings": "FIN DE CUERDAS PARA INTERFAZ COMPUESTA",
-
     "all_markets": "Todos los mercados",
     "token_borrow_cap_reached": "Se alcanzó el límite de endeudamiento de {{underlyingToken}}",
-
     "dashboard": "Tablero",
     "overview": "Visión general",
     "learn_more": "Aprende más",
-
     "cast_vote": "Voto emitido",
     "choose_a_vote": "Elija un voto",
     "cast_choice_vote": "Emitir {{choice}} votar",
@@ -310,7 +294,6 @@
     "proposal_state_executed": "Ejecutado",
     "proposal_state_canceled": "Cancelado",
     "proposal_state_expired": "Caducado",
-
     "starts_on": "Comienza el {{time}}",
     "ends_on": "Finaliza el {{time}}",
     "active_in": "Activo en {{time}}",
@@ -321,9 +304,7 @@
     "canceled_time": "Cancelado {{time}}",
     "expired_time": "Cancelado {{time}}",
     "created_time": "Creado {{time}}",
-
     "active_proposals": "Propuestas activas",
-
     "proposals": "Propuestas",
     "address": "Habla a",
     "addresses": "{{numberOfAddresses}} Direcciones",
@@ -342,9 +323,7 @@
     "undelegated": "No delegado",
     "proposal_details": "Detalles de la propuesta",
     "status": "Estado",
-
     "terms": "Condiciones",
-
     "year": "año",
     "years": "años",
     "day": "día",

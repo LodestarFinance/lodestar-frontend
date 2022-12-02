@@ -3,7 +3,7 @@
     "development": "http://localhost:4000/",
     "arbitrumtest": "https://api.lodestarfinance.io/",
     "arbitrumgoerli": "https://api.lodestarfinance.io/",
-    "arbitrum": "https://placeholder.url/"
+    "arbitrum": "https://"
   },
   "DATA_PROVIDERS": {
     "development": "http://localhost:8545",

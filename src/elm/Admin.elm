@@ -269,6 +269,9 @@ view userLanguage configs abiFilesRaw account maybeNetwork currentTimeZone maybe
                 Just MainNet ->
                     String.toLower (networkName MainNet)
 
+                Just Arbitrum ->
+                    String.toLower (networkName Arbitrum)
+
                 Just network ->
                     String.toLower (networkName network)
 
