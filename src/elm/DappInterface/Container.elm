@@ -265,6 +265,9 @@ testNetwork maybeNetwork =
         Just Network.MainNet ->
             Nothing
 
+        Just Network.Arbitrum ->
+            Nothing
+
         Just network ->
             Just (Network.networkName network)
 

@@ -3385,9 +3385,9 @@ component-emitter@^1.2.1:
     webpack-dev-server "^3.7.2"
     yargs "^16.2.0"
 
-"compound-config@https://github.com/LodestarFinance/lodestar-config.git#09f1c34ff567b18c81a4c4cd4d9ecb3515a3818b":
+"compound-config@https://github.com/LodestarFinance/lodestar-config.git#52d63f0d3f016b6c4c11ed202c52a25afac5f96e":
   version "0.0.0"
-  resolved "https://github.com/LodestarFinance/lodestar-config.git#09f1c34ff567b18c81a4c4cd4d9ecb3515a3818b"
+  resolved "https://github.com/LodestarFinance/lodestar-config.git#52d63f0d3f016b6c4c11ed202c52a25afac5f96e"
 
 compressible@~2.0.16:
   version "2.0.18"

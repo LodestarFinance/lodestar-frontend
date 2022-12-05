@@ -37,7 +37,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "cli-table": "0.3.1",
     "compound-components": "https://github.com/LodestarFinance/lodestar-components.git#556db2d7c97670927afc668994a091df3220ad06",
-    "compound-config": "https://github.com/LodestarFinance/lodestar-config.git#09f1c34ff567b18c81a4c4cd4d9ecb3515a3818b",
+    "compound-config": "https://github.com/LodestarFinance/lodestar-config.git#52d63f0d3f016b6c4c11ed202c52a25afac5f96e",
     "connect-history-api-fallback": "^1.5.0",
     "core-js": "3",
     "cross-spawn": "^7.0.2",
